@@ -1,6 +1,6 @@
 var b = document.createElement("div");
 b.innerHTML =
-  '<button id = "btn" onclick="mainFunction()"><h1>START</h1></button>';
+  '<button id = "btn" onclick="mainFunction()"><h1>Start countdown</h1></button>';
 b.setAttribute("id", "divi");
 document.body.append(b);
 
