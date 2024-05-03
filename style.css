@@ -1,0 +1,34 @@
+#btn {
+  color: red;
+  margin: 100px 100px 100px 100px;
+}
+
+#divi {
+  text-align: center;
+}
+.img {
+  align-items: center;
+}
+
+#startButton {
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 20px auto;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#countdown,
+#message {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
