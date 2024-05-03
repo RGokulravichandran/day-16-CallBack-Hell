@@ -1,29 +1,21 @@
-document.getElementById("startButton").addEventListener("click", function () {
-  // Define the countdown function
-  function countdown(num, callback) {
-    if (num > 0) {
-      // Display the countdown number on the webpage
-      document.getElementById("countdown").innerText = num;
-      // Hide the message
-      document.getElementById("message").style.display = "none";
-      // Show the countdown
-      document.getElementById("countdown").style.display = "block";
-      setTimeout(function () {
-        countdown(num - 1, callback);
-      }, 1000);
-    } else {
-      // Display "Happy Independence Day" on the webpage after countdown
-      document.getElementById("message").innerText = "Happy Independence Day";
-      // Hide the countdown
-      document.getElementById("countdown").style.display = "none";
-      // Show the message
-      document.getElementById("message").style.display = "block";
-      callback();
-    }
-  }
+const b = document.createElement("div");
+b.innerHTML = '<button id="btn"><h1>START</h1></button>';
+b.setAttribute("id", "divi");
+document.body.append(b);
 
-  // Start the countdown from 10
-  countdown(10, function () {
-    // Optional: Do something after the countdown finishes
-  });
+document.getElementById("btn").addEventListener("click", function () {
+  const a = document.body;
+  let num = 10;
+
+  const countdown = function () {
+    if (num > 0) {
+      a.innerHTML = "<h1>" + num + "</h1>";
+      num--;
+      setTimeout(countdown, 1000);
+    } else {
+      a.innerHTML = "<h1>Happy Independence Day</h1>";
+    }
+  };
+
+  countdown();
 });
